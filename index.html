@@ -1,0 +1,249 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <title>Bài tập mảng</title>
+        <!-- Required meta tags -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+        <!-- Bootstrap CSS -->
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+            integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        <!-- font awesome -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+            integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+            crossorigin="anonymous" referrerpolicy="no-referrer" />
+    </head>
+    <body>
+        <div class="container py-5 px-5">
+            <h1 class="text-center bg-warning">Bài tập mảng</h1>
+            <div class="input-container mt-5 mb-3">
+                <input id="input-arr" type="number">
+                <button onclick="themSo()" class="btn bg-info ml-3">Thêm Số</button>
+            </div>
+            <div class="output-container pl-3 bg-secondary mb-5">
+                <h3 id="output-array"></h3>
+            </div>
+            <div class="accordion w" id="accordionExample">
+                <!-- tổng số dương -->
+                <div class="card">
+                    <div class="card-header" id="headingOne">
+                        <h2 class="mb-0">
+                            <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseOne"
+                                aria-expanded="true" aria-controls="collapseOne">
+                                #1 Tổng số dương
+                            </button>
+                        </h2>
+                    </div>
+
+                    <div id="collapseOne" class="collapse show" aria-labelledby="headingOne"
+                        data-parent="#accordionExample">
+                        <div class="card-body">
+                            <button onclick="tongSoDuong()" class="btn bg-info ml-3 mb-3">RESULT</button>
+                            <div class="output-container pl-3 bg-secondary">
+                                <h3 id="output-1"></h3>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- đếm số dương -->
+                <div class="card">
+                    <div class="card-header" id="headingTwo">
+                        <h2 class="mb-0">
+                            <button class="btn btn-link collapsed" type="button" data-toggle="collapse"
+                                data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                #2 Đếm số dương
+                            </button>
+                        </h2>
+                    </div>
+                    <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
+                        <div class="card-body">
+                            <button onclick="demSoDuong()" class="btn bg-info ml-3 mb-3">RESULT</button>
+                            <div class="output-container pl-3 bg-secondary">
+                                <h3 id="output-2"></h3>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- tìm số nhỏ nhất -->
+                <div class="card">
+                    <div class="card-header" id="headingThree">
+                        <h2 class="mb-0">
+                            <button class="btn btn-link collapsed" type="button" data-toggle="collapse"
+                                data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                #3 Tìm số nhỏ nhất
+                            </button>
+                        </h2>
+                    </div>
+                    <div id="collapseThree" class="collapse" aria-labelledby="headingThree"
+                        data-parent="#accordionExample">
+                        <div class="card-body">
+                            <button onclick="soNhoNhat()" class="btn bg-info ml-3 mb-3">RESULT</button>
+                            <div class="output-container pl-3 bg-secondary">
+
+                                <h3 id="output-3"></h3>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- tìm số dương nhỏ nhất -->
+                <div class="card">
+                    <div class="card-header" id="heading4">
+                        <h2 class="mb-0">
+                            <button class="btn btn-link collapsed" type="button" data-toggle="collapse"
+                                data-target="#collapse4" aria-expanded="false" aria-controls="collapse4">
+                                #4 Tìm số dương nhỏ nhất
+                            </button>
+                        </h2>
+                    </div>
+                    <div id="collapse4" class="collapse" aria-labelledby="heading4" data-parent="#accordionExample">
+                        <div class="card-body">
+                            <button onclick="soDuongNhoNhat()" class="btn bg-info ml-3 mb-3">RESULT</button>
+                            <div class="output-container pl-3 bg-secondary">
+                                <h3 id="output-4"></h3>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- tìm số chẵn cuối cùng -->
+                <div class="card">
+                    <div class="card-header" id="heading5">
+                        <h2 class="mb-0">
+                            <button class="btn btn-link collapsed" type="button" data-toggle="collapse"
+                                data-target="#collapse5" aria-expanded="false" aria-controls="collapse5">
+                                #5 Tìm số chẵn cuối cùng
+                            </button>
+                        </h2>
+                    </div>
+                    <div id="collapse5" class="collapse" aria-labelledby="heading5" data-parent="#accordionExample">
+                        <div class="card-body">
+                            <button onclick="soChanCuoiCung()" class="btn bg-info ml-3 mb-3">RESULT</button>
+                            <div class="output-container pl-3 bg-secondary">
+                                <h3 id="output-5"></h3>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- đổi chỗ -->
+                <div class="card">
+                    <div class="card-header" id="heading6">
+                        <h2 class="mb-0">
+                            <button class="btn btn-link collapsed" type="button" data-toggle="collapse"
+                                data-target="#collapse6" aria-expanded="false" aria-controls="collapse6">
+                                #6 Đổi chỗ
+                            </button>
+                        </h2>
+                    </div>
+                    <div id="collapse6" class="collapse" aria-labelledby="heading6" data-parent="#accordionExample">
+                        <div class="card-body">
+                            <input id="vitri-1" type="number" placeholder="Vị trí 1">
+                            <input id="vitri-2" type="number" placeholder="Vị trí 2">
+                            <button onclick="doiViTRi()" class="btn bg-info ml-3 mb-3">RESULT</button>
+                            <div class="output-container pl-3 bg-secondary">
+                                <h3 id="output-6"></h3>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- sắp xếp tăng dần -->
+                <div class="card">
+                    <div class="card-header" id="heading7">
+                        <h2 class="mb-0">
+                            <button class="btn btn-link collapsed" type="button" data-toggle="collapse"
+                                data-target="#collapse7" aria-expanded="false" aria-controls="collapse7">
+                                #7 Sắp xếp tăng dần
+                            </button>
+                        </h2>
+                    </div>
+                    <div id="collapse7" class="collapse" aria-labelledby="heading7" data-parent="#accordionExample">
+                        <div class="card-body">
+                            <button onclick="tuBeDenLon()" class="btn bg-info ml-3 mb-3">RESULT</button>
+                            <div class="output-container pl-3 bg-secondary">
+                                <h3 id="output-7"></h3>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- tìm số nguyên tố đầu tiên -->
+                <div class="card">
+                    <div class="card-header" id="heading8">
+                        <h2 class="mb-0">
+                            <button class="btn btn-link collapsed" type="button" data-toggle="collapse"
+                                data-target="#collapse8" aria-expanded="false" aria-controls="collapse8">
+                                #8 Tìm số nguyên tố đầu tiên
+                            </button>
+                        </h2>
+                    </div>
+                    <div id="collapse8" class="collapse" aria-labelledby="heading8" data-parent="#accordionExample">
+                        <div class="card-body">
+                            <button onclick="soNguyenToDauTien()" class="btn bg-info ml-3 mb-3">RESULT</button>
+                            <div class="output-container pl-3 bg-secondary">
+                                <h3 id="output-8"></h3>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- điếm số nguyên -->
+                <div class="card">
+                    <div class="card-header" id="heading9">
+                        <h2 class="mb-0">
+                            <button class="btn btn-link collapsed" type="button" data-toggle="collapse"
+                                data-target="#collapse9" aria-expanded="false" aria-controls="collapse9">
+                                #9 Đếm số nguyên
+                            </button>
+                        </h2>
+                    </div>
+                    <div id="collapse9" class="collapse" aria-labelledby="heading9" data-parent="#accordionExample">
+                        <div class="card-body">
+                            <div class="my-3">
+                                <h5>Nhập thêm số</h5>
+                                <input id="input-them-so-nguyen" type="number" placeholder="Thêm số">
+                                <button onclick="themSoNguyen()" class="btn btn-outline-danger">Thêm Số</button>
+                                <div class="output-container pl-3 bg-secondary">
+                                    <h3 id="output-them-so-nguyen"></h3>
+                                </div>
+                            </div>
+                            <button onclick="demSoNguyen()" class="btn bg-info d-block ml-3 mb-3">RESULT</button>
+                            <div class="output-container pl-3 bg-secondary">
+                                <h3 id="output-9"></h3>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- so sánh số lượng số âm và số dương -->
+                <div class="card">
+                    <div class="card-header" id="heading10">
+                        <h2 class="mb-0">
+                            <button class="btn btn-link collapsed" type="button" data-toggle="collapse"
+                                data-target="#collapse10" aria-expanded="false" aria-controls="collapse10">
+                                #10 So sánh số lượng số âm và số dương
+                            </button>
+                        </h2>
+                    </div>
+                    <div id="collapse10" class="collapse" aria-labelledby="heading10" data-parent="#accordionExample">
+                        <div class="card-body">
+                            <button onclick="soSanh()" class="btn bg-info ml-3 mb-3">RESULT</button>
+                            <div class="output-container pl-3 bg-secondary">
+                                <h3 id="output-10-1"></h3>
+                                <h3 id="output-10"></h3>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Optional JavaScript -->
+        <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+            integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+            crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+            integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+            crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+            integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+            crossorigin="anonymous"></script>
+        <!-- js main -->
+        <script src="./index.js"></script>
+    </body>
+</html>
